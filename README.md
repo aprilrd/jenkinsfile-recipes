@@ -123,5 +123,10 @@ step([
 ```
 - Tested in Jenkins ^2.1
 
+#### To add Cobertura coverage report
+```groovy
+step([$class: 'CoberturaPublisher', autoUpdateHealth: false, autoUpdateStability: false, coberturaReportFile: 'output/coverage/cobertura-coverage.xml', failUnhealthy: false, failUnstable: false, maxNumberOfBuilds: 0, onlyStable: false, sourceEncoding: 'ASCII', zoomCoverageChart: false])
+```
+- Tested in Jenkins ^2.119
 # License
 MIT
