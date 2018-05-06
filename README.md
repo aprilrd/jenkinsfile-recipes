@@ -3,6 +3,8 @@ This repository lists useful code snippets for Jenkinsfile. Even with step refer
 
 If you find a useful snippet is missing, please make a PR!
 
+* Most of the recipes are usable in [Jenkins Pipeline](https://jenkins.io/doc/book/pipeline/syntax/) as well. I recommend using Jenkins Pipeline as it tends to be easier to read, maintain, and test Pipelines.
+
 
 ### Set up related recipes
 #### To set a commit status in github to be `in progress`
@@ -67,7 +69,7 @@ withCredentials([
 ```groovy
 currentBuild.description = buildStatus
 ```
-So if you want to set the description based on a stage:
+So if you want to set the description based on a Pipeline stage:
 ```groovy
 failure {
     script {
